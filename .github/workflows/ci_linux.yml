@@ -32,5 +32,8 @@ jobs:
       
     - name: Testbed
       working-directory: tests/Testbed
-      run: xvfb-run ${{github.workspace}}/build/build/TestbedD gl -v -f
+      run: |
+        mkdir Output
+        mkdir Output/OpenGL
+        xvfb-run ${{github.workspace}}/build/build/TestbedD gl -v -f
 
